@@ -26,7 +26,19 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   {{ .Content }}
-                  {{ partial "comments.html" .}}
+                  Section : {{ .Section }}<br/>
+                  . : {{ . }}<br/>
+                  Path : {{ .Path }}<br/>
+                  Page : {{ .Page }}<br/>
+                  Url : {{ .URL }} <br/>
+                  BaseUrl : {{ .Site.BaseURL }} <br/>
+                  SiteGetPage : {{ .Site.GetPage }}<br/><br/>
+                  {{ with .Site.GetPage "/posts" }}
+                    {{ with .GetPage "test.md"}}
+                        {{ .Title }}
+                    {{end}}
+                  {{end}}
+                  <!-- {{ partial "comments.html" .}} -->
                 </div>
             </div>
         </div>

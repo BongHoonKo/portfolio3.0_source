@@ -26,7 +26,9 @@ draft = false
 image = ""
 
 comments = true
-date = {{ .Date }}
+date = 2019-10-18T14:09:53+09:00
+
+headless = true
 +++
 
 <!-- 게시글 내용 -->

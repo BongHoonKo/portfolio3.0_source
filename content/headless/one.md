@@ -10,11 +10,11 @@ series = [
 
 #작성자
 authors = [
-    "",
+    "auts",
 ]
 
 #제목
-title = ""
+title = "Title"
 
 #설명
 description = ""
@@ -26,7 +26,8 @@ draft = false
 image = ""
 
 comments = true
-date = {{ .Date }}
+date = 2019-10-18T14:09:58+09:00
 +++
 
 <!-- 게시글 내용 -->
+Content

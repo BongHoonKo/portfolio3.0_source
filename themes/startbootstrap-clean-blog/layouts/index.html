@@ -23,6 +23,14 @@
           {{ range first $posts (where .Data.Pages "Type" "posts") }}
               {{ .Render "summary"}}
           {{ end }}
+          {{ range where .Pages "Section" "resource" }}
+            {{ .Title }}
+            {{ .Content }}
+          {{end}}
+
+          {{ range .Site.Data.product }}
+            {{ partial "product.html" .}}
+          {{end}}
           <!-- Pager -->
           <ul class="pager">
             <li class="next">
@@ -32,5 +40,13 @@
         </div>
       </div>
     </div>
+
+    {{ $headless := .Site.GetPage "/headless" }}
+    {{ $reusablePages := $headless.Resources.Match "one*" }}
+    <h2>Authors</h2>
+    {{ range $reusablePages }}
+        <h3>{{ .Title }}</h3>
+        {{ .Content }}
+    {{ end }}
 
 {{ partial "footer.html" .}}

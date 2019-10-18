@@ -14,7 +14,7 @@ authors = [
 ]
 
 #제목
-title = ""
+title = "Index Page"
 
 #설명
 description = ""
@@ -26,7 +26,7 @@ draft = false
 image = ""
 
 comments = true
-date = {{ .Date }}
+date = 2019-10-18T10:10:53+09:00
 +++
 
 <!-- 게시글 내용 -->

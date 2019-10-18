@@ -1,12 +1,15 @@
 +++
 #카테고리
 categories = [
-    "",
+    "Salesforce",
 ]
 
 series = [
     
 ]
+
+slug = "gobong"
+url = "/blog/new/"
 
 #작성자
 authors = [
@@ -14,7 +17,7 @@ authors = [
 ]
 
 #제목
-title = ""
+title = "Title"
 
 #설명
 description = ""
@@ -26,7 +29,8 @@ draft = false
 image = ""
 
 comments = true
-date = {{ .Date }}
+date = 2019-10-17T15:08:32+09:00
 +++
 
 <!-- 게시글 내용 -->
+ddddddddddddddd

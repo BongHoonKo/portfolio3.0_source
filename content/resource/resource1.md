@@ -14,7 +14,7 @@ authors = [
 ]
 
 #제목
-title = ""
+title = "test"
 
 #설명
 description = ""
@@ -26,7 +26,8 @@ draft = false
 image = ""
 
 comments = true
-date = {{ .Date }}
+date = 2019-10-18T14:21:24+09:00
 +++
 
 <!-- 게시글 내용 -->
+test
