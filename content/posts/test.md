@@ -26,7 +26,7 @@ description = ""
 draft = false
 
 #썸네일 이미지 URL
-image = ""
+#image = ""
 
 comments = true
 date = 2019-10-17T15:08:32+09:00

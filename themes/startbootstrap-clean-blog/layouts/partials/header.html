@@ -11,7 +11,7 @@
     <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ end }}">
 
 
-    <title>{{ .Title }} -- {{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}</title>
 
     {{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -22,7 +22,9 @@
     <link href="{{ .Site.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ .Site.BaseURL }}/css/clean-blog.min.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/index.css" rel="stylesheet" />
+
+    <!-- <link href="{{ .Site.BaseURL }}/css/clean-blog.min.css" rel="stylesheet"> -->
     {{- range $val := $.Site.Params.customCSS -}}
 	{{- if gt (len $val) 0 -}}
 		<link rel="stylesheet" type="text/css" href="{{ $val }}">
