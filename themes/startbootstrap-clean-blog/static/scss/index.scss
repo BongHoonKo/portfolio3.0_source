@@ -5,11 +5,15 @@
 @import 'utils/mixin';
 
 // base
+@import 'base/reset';
 @import 'base/font';
 
 // layout
 @import 'layout/header';
 @import 'layout/footer';
+
+// component
+@import 'component/button';
 
 // pages
 @import 'pages/home';

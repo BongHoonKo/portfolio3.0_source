@@ -2,7 +2,6 @@
 #카테고리
 categories = [
     "Salesforce",
-    "Hugo"
 ]
 
 series = [

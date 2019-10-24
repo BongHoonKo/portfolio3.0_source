@@ -1,0 +1,13 @@
+@mixin clearfix() {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond-to($val, $breakpoint) {
+    @media all and ($val : $breakpoint) {
+        @content;
+    }
+}

@@ -1,10 +1,16 @@
-               <div class="post-preview">
-                 <a href="{{ .Permalink }}">
+               <li class="col-lg-4 col-sm-6">
+                  <img class="port-works__img" src="http://fotrise3.cafe24.com/resources/images/starcoin.jpg" alt=""/>
+                  <div class="port-works__post">
+                    <p class="post-meta">
+                      {{ partial "meta.html" .}}
+                    </p>
+                    <a href="{{ .Permalink }}">
                       <h2 class="post-title">{{ .Title }}</h2>
                       <h3 class="post-subtitle">{{ .Description }}</h3>
                     </a>
-                    <p class="post-meta">
-                      {{ partial "meta.html" .}}
-                  </p>
-                </div>
-                <hr>
+                    <br/>
+                    <p class="post-data">
+                        {{.Page.Date.Format "Mon, Jan 2, 2006"}}
+                    </p>
+                  </div>
+                </li>

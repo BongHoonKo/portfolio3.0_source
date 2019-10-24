@@ -1,0 +1,147 @@
+.port-main__wrap {
+    margin-top: 51px;
+}
+
+.port-section {
+    margin-bottom: 10rem;
+}
+.port-section__box {
+}
+.port-section__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.25em;
+}
+.port-section__bar {
+    width: 1.5rem;
+    height: 3px;
+    background-color: $main-color;
+    margin: {
+        left: auto;
+        right: auto;
+        top: 0.5rem;
+        bottom: 2rem;
+    }
+}
+
+// About
+.port-about {
+    box-shadow: 3px 3px 30px rgba(0,0,0,0.15);
+    padding: 2rem;
+    position: relative;
+    border-radius: 3px;
+    @include clearfix();
+}
+
+.port-about__box {
+    float: left;
+    margin-left: 2rem;
+    padding-top: 1rem;
+    .port-about__title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    .port-about__list {
+        & > li {
+            text-indent: 5px;
+            margin-bottom: 0.25rem;
+            & > em {
+                opacity: 0.65;
+            }
+        }
+        &:first-of-type {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// Recent Works
+.port-works {
+    text-align: center;
+}
+.port-works__list {
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    & > li {
+        position: absolute;
+        top: 0;
+        padding-bottom: 30px;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        @include respond-to(min-width, 1200px) {
+            &:nth-of-type(3n+1) {
+                clear: both;
+            }
+            &:nth-of-type(3n+2) {
+                left: 33.333%;
+            }
+            &:nth-of-type(3n) {
+                right: 0;
+            }
+        }
+    
+        @include respond-to(max-width, 1199px) {
+              &:nth-of-type(2n) {
+                right: 0;
+              }
+              &:nth-of-type(2n+1) {
+                left: 0;
+              }
+        }
+        @include respond-to (max-width, 767px) {
+            & {
+                position: static !important;
+            }
+        }
+    }
+    .port-works__post {
+        padding: 1.5rem;
+        padding-bottom: 2rem;
+        box-shadow: 0 0 25px rgba(0,0,0,0.15);
+        
+        .post-title {
+            color: $black;
+            font-weight: 900;
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+        .post-subtitle {
+            font-size: 1.1rem;
+            color: $gray;
+        }
+    }
+    .port-works__img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .port-catrgory {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        color: #fff;
+        background-color: $main-color;
+        border-radius: 4px;
+        margin-right: 0.25rem;
+    }
+
+    @include respond-to (max-width, 767px) {
+        & {
+            height: auto !important;
+        }
+    }
+}
+
+// Skills
+.port-skill {
+    .port-skill__list {
+        width: 100%;
+        @include clearfix();
+        & > li {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+    }
+}

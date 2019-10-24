@@ -1,52 +1,86 @@
 {{ partial "header.html" .}}
 
-    <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/home-bg.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>{{ .Site.Title }}</h1>
-             <hr class="small">
-             {{ with .Site.Params.Description }}<span class="subheading">{{ . }}</span>{{ end }}
-           </div>
-         </div>
-       </div>
-     </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
+    <section class="port-main__wrap container port-section">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
-          {{ range first $posts (where .Data.Pages "Type" "posts") }}
-              {{ .Render "summary"}}
-          {{ end }}
-          {{ range where .Pages "Section" "resource" }}
-            {{ .Title }}
-            {{ .Content }}
-          {{end}}
-
-          {{ range .Site.Data.product }}
-            {{ partial "product.html" .}}
-          {{end}}
-          <!-- Pager -->
-          <ul class="pager">
-            <li class="next">
-              <a href="{{ .Site.BaseURL }}/posts/">Older Posts &rarr;</a>
-            </li>
-          </ul>
+        <div class="port-main col-xs-12 port-section__box">
+          <h2 class="port-main__title">
+            {{ .Site.Title }}
+          </h2>
+          <p class="port-main__txt">
+            {{ .Site.Params.Description }}
+          </p>
+          <a href="#" class="port-link__btn">My Works</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    {{ $headless := .Site.GetPage "/headless" }}
+    <!-- ABOUT -->
+    <section class="port-about__wrap container port-section">
+        <div class="port-section__box row">
+          <h3 class="port-section__title">ABOUT</h3>
+          <hr class="port-section__bar"/>
+          <article class="port-about col-lg-10 col-lg-offset-1 col-xs-12">
+            <div style="width:250px;height:250px;background-color:#9a9a9a;float:left;"></div>
+            <div class="port-about__box">
+              <h5 class="port-about__title">Profile</h5>
+              <ul class="port-about__list">
+                <li><em>이름</em> : 고봉훈</li>
+                <li><em>생년월일</em> : 1992.01.04</li>
+              </ul>
+
+              <h5 class="port-about__title">Career &amp; Education</h5>
+              <ul class="port-about__list">
+                <li><em>2009. 02 : </em> 동래고등학교 졸업</li>
+                <li><em>2018. 02 : </em>부산대학교 디자인학과 시각디자인전공(학사)</li>
+                <li><em>2017. 12 : </em>(주) RAON 홈페이지 퍼블리싱</li>
+                <li><em>2018. 01 : </em>(주) OPUS DESIGN 홈페이지 제작</li>
+                <li><em>2018. 05
+                    ~ 2019. 01 : </em>(주) KSTARPAY 웹퍼블리시팀 매니저</li>
+                <li><em>2019. 04 ~ : </em>(주) DKBMC 개발1팀 퍼블리셔 </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+    </section>
+
+    <!-- Recent Works -->
+    <section class="port-works__wrap container port-section">
+        <div class="port-section__box row">
+          <h3 class="port-section__title">Recent Works</h3>
+          <hr class="port-section__bar"/>
+          <article class="port-works">
+            <ul class="port-works__list">
+              {{ $posts := or .Site.Params.PostSummariesFrontPage 6 }}
+              {{ range first $posts (where .Data.Pages "Type" "posts") }}
+                  {{ .Render "summary"}}
+              {{ end }}
+            </ul>
+            <a class="port-link__btn" href="{{ .Site.BaseURL }}/posts/">View More</a>
+          </article>
+        </div>
+    </section>
+
+    <!--  -->
+    <section class="port-skill__wrap container port-section">
+        <div class="port-section__box row">
+          <h3 class="port-section__title">Skills</h3>
+          <hr class="port-section__bar"/>
+          <div class="port-skill">
+            <ul class="port-skill__list">
+              {{ range .Site.Data.skills }}
+                <li>{{ .title }}<br/>{{ .percentage }} %</li>
+              {{end}}
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <!-- {{ $headless := .Site.GetPage "/headless" }}
     {{ $reusablePages := $headless.Resources.Match "one*" }}
     <h2>Authors</h2>
     {{ range $reusablePages }}
         <h3>{{ .Title }}</h3>
         {{ .Content }}
-    {{ end }}
+    {{ end }} -->
 
 {{ partial "footer.html" .}}
