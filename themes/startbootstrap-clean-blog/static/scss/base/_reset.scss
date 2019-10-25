@@ -24,10 +24,10 @@ time, mark, audio, video {
 
 a {
     text-decoration: none;
-    color: $black;
+    color: $title-color;
 
     &:focus, &:active, &:hover {
-        color: $black;
+        color: $title-color;
         text-decoration: none;
     }
 }

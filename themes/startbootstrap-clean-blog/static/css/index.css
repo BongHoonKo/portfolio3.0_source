@@ -1,3 +1,9 @@
+/**/
+/*
+$back-color: $black;
+$title-color: $white;
+$txt-color: $light-color;
+$btn-color: $black;*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -402,6 +408,7 @@ textarea {
     font-style: normal;
   }*/
 html, body {
+  background-color: whitesmoke;
   color: #1a1527;
   font-size: 16px;
   font-weight: normal;
@@ -410,16 +417,21 @@ html, body {
   line-height: 1.5;
 }
 
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+}
+
 .port-link__btn {
   font-size: 1rem;
   font-weight: bold;
   border: 2px solid #1a1527;
   border-radius: 4px;
   padding: 0.65rem 1rem;
-}
-
-.port-main__wrap {
-  margin-top: 51px;
+  background-color: #fefdfa;
+  letter-spacing: normal;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .port-section {
@@ -437,15 +449,94 @@ html, body {
   width: 1.5rem;
   height: 3px;
   background-color: #5918df;
+  border: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
 
+.port-main__wrap {
+  height: 80vh;
+  min-height: 700px;
+  background: -webkit-gradient(linear, left top, right top, from(#5041b2), to(#7969e6));
+  background: linear-gradient(90deg, #5041b2, #7969e6);
+  position: relative;
+}
+
+.port-main__wrap .row,
+.port-main__wrap > .container {
+  height: 100%;
+  position: relative;
+}
+
+.port-main__wrap .port-main__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/background-filter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.port-main__wrap .port-main__back.gobong {
+  background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
+  background-size: 500px;
+  background-position: bottom right 30px;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+}
+
+.port-main {
+  position: relative;
+  height: 100%;
+}
+
+.port-main .port-main__title {
+  color: #fefdfa;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-indent: -10px;
+}
+
+.port-main .port-main__title > strong {
+  opacity: 0.5;
+}
+
+.port-main .port-main__txt {
+  color: #fefdfa;
+  opacity: 0.5;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.port-main .port-main__box {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.port-main .port-link__btn {
+  border-color: #fefdfa;
+  color: #fefdfa;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.port-main .port-link__btn:hover {
+  background-color: #fefdfa;
+  color: #5918df;
+}
+
 .port-about {
   -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
           box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+  background-color: #fefdfa;
   padding: 2rem;
   position: relative;
   border-radius: 3px;
@@ -531,6 +622,8 @@ html, body {
   padding-bottom: 2rem;
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  background-color: #fefdfa;
+  border-radius: 3px 3px 0 0;
 }
 
 .port-works__list .port-works__post .post-title {
@@ -548,6 +641,7 @@ html, body {
 .port-works__list .port-works__img {
   width: 100%;
   max-width: 100%;
+  border-radius: 3px 3px 0 0;
 }
 
 .port-works__list .port-catrgory {
@@ -579,4 +673,53 @@ html, body {
   width: 25%;
   float: left;
   text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.port-skill .port-skill__list > li .port-skill__range {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  line-height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+.port-subscribe {
+  width: 100%;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+  background-color: #fefdfa;
+  padding: 3rem 2rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.port-subscribe::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.port-subscribe .port-subscribe__title {
+  font-size: 1.85rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.25rem 0 1rem 0;
+}
+
+.port-subscribe .port-subscribe__form {
+  clear: both;
+  float: none;
+  margin-bottom: 2rem;
+}
+
+.port-subscribe .port-subscribe__input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid #7a7a7a;
 }

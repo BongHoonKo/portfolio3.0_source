@@ -1,15 +1,21 @@
 {{ partial "header.html" .}}
 
-    <section class="port-main__wrap container port-section">
-      <div class="row">
-        <div class="port-main col-xs-12 port-section__box">
-          <h2 class="port-main__title">
-            {{ .Site.Title }}
-          </h2>
-          <p class="port-main__txt">
-            {{ .Site.Params.Description }}
-          </p>
-          <a href="#" class="port-link__btn">My Works</a>
+    <section class="port-main__wrap container-fluid port-section">
+      <div class="port-main__back"></div>
+      <div class="container">
+        <div class="port-main__back gobong"></div>
+        <div class="row">
+          <div class="port-main col-xs-12 port-section__box">
+            <div class="port-main__box">
+              <h2 class="port-main__title">
+                <strong>Test </strong>{{ .Site.Title }}
+              </h2>
+              <p class="port-main__txt">
+                {{ .Site.Params.Description }}
+              </p>
+              <a href="#" class="port-link__btn">My Works</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -30,13 +36,9 @@
 
               <h5 class="port-about__title">Career &amp; Education</h5>
               <ul class="port-about__list">
-                <li><em>2009. 02 : </em> 동래고등학교 졸업</li>
-                <li><em>2018. 02 : </em>부산대학교 디자인학과 시각디자인전공(학사)</li>
-                <li><em>2017. 12 : </em>(주) RAON 홈페이지 퍼블리싱</li>
-                <li><em>2018. 01 : </em>(주) OPUS DESIGN 홈페이지 제작</li>
-                <li><em>2018. 05
-                    ~ 2019. 01 : </em>(주) KSTARPAY 웹퍼블리시팀 매니저</li>
-                <li><em>2019. 04 ~ : </em>(주) DKBMC 개발1팀 퍼블리셔 </li>
+                {{ range .Site.Data.career }}
+                  <li><em>{{ .date }} : </em> {{ .title }}</li>
+                {{ end }}
               </ul>
             </div>
           </article>
@@ -46,7 +48,7 @@
     <!-- Recent Works -->
     <section class="port-works__wrap container port-section">
         <div class="port-section__box row">
-          <h3 class="port-section__title">Recent Works</h3>
+          <h3 class="port-section__title">RECENT WORKS</h3>
           <hr class="port-section__bar"/>
           <article class="port-works">
             <ul class="port-works__list">
@@ -60,17 +62,38 @@
         </div>
     </section>
 
-    <!--  -->
+    <!-- Skills -->
     <section class="port-skill__wrap container port-section">
         <div class="port-section__box row">
-          <h3 class="port-section__title">Skills</h3>
+          <h3 class="port-section__title">SKILLS</h3>
           <hr class="port-section__bar"/>
           <div class="port-skill">
             <ul class="port-skill__list">
               {{ range .Site.Data.skills }}
-                <li>{{ .title }}<br/>{{ .percentage }} %</li>
+                <li>
+                  <i class="port-skill__range">{{ .percentage }} %</i>
+                  {{ .title }}
+                </li>
               {{end}}
             </ul>
+          </div>
+        </div>
+    </section>
+
+    <!-- Subscribe -->
+    <section class="port-subscribe__wrap container port-section">
+        <div class="port-section__box row">
+          <h3 class="port-section__title">SUBSCRIBE</h3>
+          <hr class="port-section__bar"/>
+          <div class="port-subscribe">
+            <div style="width:100px;height:100px;border-radius:8px;background-color:#7a7a7a;margin:0 auto;"></div>
+            <h4 class="port-subscribe__title">
+              How to Subscribe my portfolio
+            </h4>
+            <form class="port-subscribe__form col-xs-8 col-xs-offset-2">
+              <input type="email" class="port-subscribe__input" placeholder="EMIAL ADDRESS"/>
+            </form>
+            <a href="#" class="port-link__btn">Subscribe</a>
           </div>
         </div>
     </section>

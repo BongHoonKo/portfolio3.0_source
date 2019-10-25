@@ -1,5 +1,5 @@
 baseurl = "https://bonghoonko.github.io/"
-title = "Portfolio"
+title = "Page"
 canonifyurls = true
 paginate = 10
 theme = "startbootstrap-clean-blog"
@@ -13,7 +13,7 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
-  Description = "Your site description"
+  Description = "Lorem Ipsum is simply dummy text"
   Author = "Benoît Benedetti"
   email = "benoit.benedetti@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
   postSummariesFrontPage = 6 #Number of post summaries to show on front page, comment out to allow default(4)

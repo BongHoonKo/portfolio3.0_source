@@ -1,7 +1,3 @@
-.port-main__wrap {
-    margin-top: 51px;
-}
-
 .port-section {
     margin-bottom: 10rem;
 }
@@ -17,6 +13,7 @@
     width: 1.5rem;
     height: 3px;
     background-color: $main-color;
+    border: 0;
     margin: {
         left: auto;
         right: auto;
@@ -25,9 +22,83 @@
     }
 }
 
+// Main
+.port-main__wrap {
+    //margin-top: 51px;
+    height: 80vh;
+    min-height: 700px;
+    background: linear-gradient(90deg, #5041b2, #7969e6);
+    position: relative;
+
+    & .row,
+    & > .container {
+        height: 100%;
+        position: relative;
+    }
+
+    .port-main__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/background-filter.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        &.gobong {
+            background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
+            background-size: 500px;
+            background-position: bottom right 30px;
+            background-repeat: no-repeat;
+            opacity: 0.75;
+        }
+    }
+}
+.port-main {
+    position: relative;
+    height: 100%;
+    .port-main__title {
+        color: $white;
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-indent: -10px;
+
+        & > strong {
+            opacity: 0.5;
+        }
+    }
+    .port-main__txt {
+        color: $white;
+        opacity: 0.5;
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    .port-main__box {
+        position: absolute;
+        top: 48%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .port-link__btn {
+        border-color: $white;
+        color: $white;
+        background-color: transparent;
+        font-weight: normal;
+    }
+    .port-link__btn:hover {
+        background-color: $white;
+        color: $main-color;
+    }
+}
+
 // About
 .port-about {
     box-shadow: 3px 3px 30px rgba(0,0,0,0.15);
+    background-color: $white;
     padding: 2rem;
     position: relative;
     border-radius: 3px;
@@ -101,21 +172,24 @@
         padding: 1.5rem;
         padding-bottom: 2rem;
         box-shadow: 0 0 25px rgba(0,0,0,0.15);
+        background-color: $white;
+        border-radius: 3px 3px 0 0;
         
         .post-title {
-            color: $black;
+            color: $title-color;
             font-weight: 900;
             font-size: 2rem;
             margin-top: 0.5rem;
         }
         .post-subtitle {
             font-size: 1.1rem;
-            color: $gray;
+            color: $txt-color;
         }
     }
     .port-works__img {
         width: 100%;
         max-width: 100%;
+        border-radius: 3px 3px 0 0;
     }
     .port-catrgory {
         font-size: 0.8rem;
@@ -142,6 +216,50 @@
             width: 25%;
             float: left;
             text-align: center;
+            margin-bottom: 2.25rem;
+
+            .port-skill__range {
+                display: block;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background-color: $light-gray;
+                line-height: 90px;
+                margin: {
+                    left: auto;
+                    right: auto;
+                    bottom: 0.5rem;
+                }
+            }
         }
+    }
+}
+
+// Subscribe
+.port-subscribe {
+    width: 100%;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    padding: 3rem 2rem;
+    border-radius: 3px;
+    text-align: center;
+    @include clearfix();
+
+    .port-subscribe__title {
+        font-size: 1.85rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 1.25rem 0 1rem 0;
+    }
+    .port-subscribe__form {
+        clear: both;
+        float: none;
+        margin-bottom: 2rem;
+    }
+    .port-subscribe__input {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: 2px solid $gray;
     }
 }
