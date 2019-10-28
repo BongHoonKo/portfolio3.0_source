@@ -1,7 +1,7 @@
 baseurl = "https://bonghoonko.github.io/"
 title = "Page"
 canonifyurls = true
-paginate = 10
+paginate = 9
 theme = "startbootstrap-clean-blog"
 languageCode = "en-us"
 copyright = "Code released under the Apache 2.0 license."
@@ -20,7 +20,8 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
   showReadTime = true #set to false to exclude read time from header of post
   # This will load all the CSS defined in the list
   customCSS = ["<absolute path to CSS>", "/static/css/index.css", "<or just load it off the internet>"]
-  
+  portURL = "http://fotrise3.cafe24.com"
+
 [[params.social]]
   title = "twitter"
   url = "https://twitter.com/humboldtux"

@@ -52,7 +52,7 @@
           <hr class="port-section__bar"/>
           <article class="port-works">
             <ul class="port-works__list">
-              {{ $posts := or .Site.Params.PostSummariesFrontPage 6 }}
+              {{ $posts := or .Site.Params.PostSummariesFrontPage }}
               {{ range first $posts (where .Data.Pages "Type" "posts") }}
                   {{ .Render "summary"}}
               {{ end }}

@@ -26,6 +26,17 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   {{ .Content }}
+                  {{if .Page.Params.conIamges}}
+                    {{ range .Page.Params.conImages }}
+                      <img style="width:100%;" src="{{ . }}" alt=""/>
+                    {{ end }}
+                  {{ end }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- {{ .Content }}
                   Section : {{ .Section }}<br/>
                   . : {{ . }}<br/>
                   Path : {{ .Path }}<br/>
@@ -37,11 +48,6 @@
                     {{ with .GetPage "test.md"}}
                         {{ .Title }}
                     {{end}}
-                  {{end}}
+                  {{end}}-->
                   <!-- {{ partial "comments.html" .}} -->
-                </div>
-            </div>
-        </div>
-    </article>
-
 {{ partial "footer.html" .}}
