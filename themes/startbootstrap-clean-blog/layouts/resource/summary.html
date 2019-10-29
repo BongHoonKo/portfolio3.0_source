@@ -1,0 +1,23 @@
+<li class="col-lg-4 col-sm-6">
+        <div class="port-works-img__link">
+          <a href="{{ .Permalink }}">
+            <img class="port-works__img" src="{{ .Page.Params.image }}" alt=""/>
+          </a>
+          <div class="port-icon__wrap">
+            <i href="#" class="fas fa-share" title="사이트로 바로가기" onclick="$port.directLink({{ .Page.Params.directURL }});"></i>
+          </div>
+        </div>
+        <div class="port-works__post">
+          <p class="post-meta">
+            {{ partial "meta.html" .}}
+          </p>
+          <a href="{{ .Permalink }}">
+            <h2 class="post-title">{{ .Title }}</h2>
+            <h3 class="post-subtitle">{{ .Description }}</h3>
+          </a>
+          <br/>
+          <p class="post-data">
+              {{ .Page.Date.Format "Mon, Jan 2, 2006" }}
+          </p>
+        </div>
+      </li>

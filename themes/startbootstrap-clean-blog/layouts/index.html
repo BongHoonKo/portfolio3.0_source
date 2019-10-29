@@ -86,18 +86,23 @@
           <h3 class="port-section__title">SUBSCRIBE</h3>
           <hr class="port-section__bar"/>
           <div class="port-subscribe">
-            <div style="width:100px;height:100px;border-radius:8px;background-color:#7a7a7a;margin:0 auto;"></div>
+            <div class="port-subscribe__icon"></div>
             <h4 class="port-subscribe__title">
               How to Subscribe my portfolio
             </h4>
             <form class="port-subscribe__form col-xs-8 col-xs-offset-2">
               <input type="email" class="port-subscribe__input" placeholder="EMIAL ADDRESS"/>
+              <a href="javascript:void(0)" class="port-subscribe__btn">Subscribe</a>
             </form>
-            <a href="#" class="port-link__btn">Subscribe</a>
+            <p class="port-subscribe__txt">
+              * 새로운 포트폴리오가 업로드 되었을 때, 입력한 메일로 소식을 받을 수 있습니다
+            </p>
           </div>
         </div>
     </section>
-
+    <div>
+      <div></div>
+    </div>
     <!-- {{ $headless := .Site.GetPage "/headless" }}
     {{ $reusablePages := $headless.Resources.Match "one*" }}
     <h2>Authors</h2>

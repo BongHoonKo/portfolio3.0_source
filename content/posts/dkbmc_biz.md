@@ -16,7 +16,7 @@ authors = [
 title = "DK BMC 비즈니스 블로그"
 
 #설명
-description = "DK BMC의 비즈니스 관련 포스트를 업로드하기 위한 비즈니스 블로그 개발을 전담하였습니다."
+#description = "DK BMC의 비즈니스 관련 포스트를 업로드하기 위한 비즈니스 블로그 개발을 전담하였습니다."
 
 #공개: false / 비공개: true
 draft = false

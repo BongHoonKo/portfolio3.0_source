@@ -176,7 +176,7 @@
         padding-bottom: 2rem;
         box-shadow: 0 0 25px rgba(0,0,0,0.15);
         background-color: $white;
-        border-radius: 3px 3px 0 0;
+        border-radius: 6px 6px 0 0;
         
         .post-title {
             color: $title-color;
@@ -193,7 +193,7 @@
     .port-works__img {
         width: 100%;
         max-width: 100%;
-        border-radius: 3px 3px 0 0;
+        border-radius: 6px 6px 0 0;
         border: 1px solid $light-gray;
     }
     .port-catrgory {
@@ -208,12 +208,20 @@
     .fas.fa-share {
         display: inline-block;
         position: absolute;
-        bottom: 0.5rem;
-        right: 0.5rem;
+        bottom: 0.85rem;
+        right: 0.85rem;
         border-radius: 50%;
-        border: 1px solid $white;
-        color: $white;
+        border: 1px solid $gray;
+        color: $gray;
         padding: 0.5rem;
+        opacity: 0.85;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    .fas.fa-share:hover {
+        color: $main-color;
+        border-color: $main-color;
+        opacity: 1;
     }
 
     @include respond-to (max-width, 767px) {
@@ -254,28 +262,57 @@
 // Subscribe
 .port-subscribe {
     width: 100%;
-    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+    //box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
     background-color: $white;
     padding: 3rem 2rem;
     border-radius: 3px;
     text-align: center;
     @include clearfix();
 
+    .port-subscribe__icon {
+        width: 80px;
+        height: 80px;
+        margin:0 auto;
+        background-image: url("/img/icon_subscribe.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .port-subscribe__title {
         font-size: 1.85rem;
         font-weight: bold;
         text-align: center;
-        margin: 1.25rem 0 1rem 0;
+        margin: 1.25rem 0 1.5rem 0;
     }
     .port-subscribe__form {
         clear: both;
         float: none;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
     }
     .port-subscribe__input {
         width: 100%;
-        padding: 0.5rem;
-        border-radius: 5px;
-        border: 2px solid $gray;
+        padding: 1.375rem;
+        padding-right: 10rem;
+        border-radius: 300rem;
+        //border: 2px solid $gray;
+        border: 0;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+        font-size: 1.25rem;
+    }
+    .port-subscribe__btn {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        background-color: $main-color;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: $white;
+        padding: 0.85rem 2rem;
+        border-radius: 300rem;
+        margin-top: 1px;
+    }
+    .port-subscribe__txt {
+        font-size: 0.85rem;
+        color: $gray;
     }
 }
