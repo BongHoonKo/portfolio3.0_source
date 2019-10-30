@@ -1,5 +1,31 @@
 {{ partial "header.html" .}}
-{{ partial "intro-header" (dict "context" . "startColor" .Page.Params.startColor "endColor" .Page.Params.endColor )}}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below.
+    {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')">
+      {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')">
+    {{ end }}-->
+
+    <header class="intro-header" style="background:linear-gradient(90deg, {{.Page.Params.startColor}}, {{.Page.Params.endColor}});">
+        <div class="port-main__back"></div>
+        <section class="container">
+            <div class="row">
+                <div class="col-xs-12 intro-box">
+                    <div class="intro-box__txt">
+                        <h3 class="intro-header__title">
+                            <em>Project Name. </em>
+                            {{ .Title }}
+                        </h3>
+                        <p class="intro-header__txt">
+                            {{ .Description }}
+                        </p>
+                        <a href="{{ .Page.Params.directURL }}" class="port-link__btn white__btn">View Website</a>
+                    </div>
+
+                    <img class="intro-box__img" src="{{ .Page.Params.introImg }}" alt=""/>
+                </div>
+            </div>
+        </section>
+    </header>
 
     <!-- Post Content -->
     <article>
