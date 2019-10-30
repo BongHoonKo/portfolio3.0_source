@@ -16,7 +16,7 @@ authors = [
 title = "DK BMC 비즈니스 블로그"
 
 #설명
-#description = "DK BMC의 비즈니스 관련 포스트를 업로드하기 위한 비즈니스 블로그 개발을 전담하였습니다."
+description = "DK BMC의 비즈니스 관련 포스트를 업로드하기 위한 비즈니스 블로그 개발"
 
 #공개: false / 비공개: true
 draft = false
@@ -37,6 +37,10 @@ rate = "약 90%"
 
 #페이지 URL
 directURL = "http://biz.dkbmc.com"
+
+startColor = "#5041b2"
+endColor = "#7969e6"
+introImg = "/img/biz-intro.png"
 
 comments = true
 date = 2019-06-11T09:50:23+09:00

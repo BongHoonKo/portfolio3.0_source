@@ -8,4 +8,15 @@
     background-color: $white;
     letter-spacing: normal;
     transition-duration: 0.3s;
+
+    &.white__btn {
+            border-color: $white;
+            color: $white;
+            background-color: transparent;
+            font-weight: normal;
+        &:hover {
+            background-color: $white;
+            color: $main-color;
+        }
+    }
 }

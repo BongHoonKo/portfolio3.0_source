@@ -1,7 +1,7 @@
 {{ range $index, $c :=  .Params.categories }}
   {{- if eq $index 0 -}}
-    <a class="port-catrgory" href="/categories/{{ urlize . }}">{{ title . }}</a>
+    <a class="port-category" href="/categories/{{ urlize . }}">{{ title . }}</a>
   {{- else -}}
-    <a class="port-catrgory" href="/categories/{{ urlize . }}">{{ title . }}</a>
+    <a class="port-category" href="/categories/{{ urlize . }}">{{ title . }}</a>
   {{- end -}}
 {{ end }}

@@ -1,6 +1,52 @@
+.intro-header {
+  margin-top: 60px;
+  width: 100%;
+  min-height: 610px;
+  padding: 5rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+
+  .intro-header__title {
+    font-size: 3rem;
+    color: $white;
+    font-weight: 900;
+
+    & > em {
+      display: block;
+      font-size: 1rem;
+      opacity: 0.5;
+      font-weight: normal;
+    }
+  }
+
+  .intro-header__txt {
+    font-size: 1rem;
+    color: $light-gray;
+    word-break: keep-all;
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .intro-box__txt {}
+  .intro-box__img {
+    width: 525px;
+    opacity: 0.95;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+/* Nav */
 .navbar {
-    padding: 0.25rem 0;
-    transition-duration: 0.3s;
+  padding: 0.25rem 0;
+  transition-duration: 0.3s;
   .navbar-brand {
     color: $white;
     transition-duration: 0.3s;

@@ -13,7 +13,7 @@
               <p class="port-main__txt">
                 {{ .Site.Params.Description }}
               </p>
-              <a href="#" class="port-link__btn">My Works</a>
+              <a href="#" class="port-link__btn white__btn">My Works</a>
             </div>
           </div>
         </div>
@@ -50,8 +50,8 @@
         <div class="port-section__box row">
           <h3 class="port-section__title">RECENT WORKS</h3>
           <hr class="port-section__bar"/>
-          <article class="port-works">
-            <ul class="port-works__list">
+          <article class="port-works box-align">
+            <ul class="port-works__list box-align__list">
               {{ $posts := or .Site.Params.PostSummariesFrontPage }}
               {{ range first $posts (where .Data.Pages "Type" "posts") }}
                   {{ .Render "summary"}}

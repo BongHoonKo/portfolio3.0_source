@@ -1,4 +1,4 @@
-baseurl = "https://bonghoonko.github.io/"
+baseurl = "https://bonghoonko.github.io"
 title = "Page"
 canonifyurls = true
 paginate = 9
@@ -37,10 +37,10 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
   url = "/"
   weight = -200
 [[menu.main]]
-  name = "Archives"
+  name = "Works"
   url = "/posts/"
   weight = -180
 [[menu.main]]
-  name = "resource"
+  name = "Memo"
   url = "/resource/"
   weight = "-170"

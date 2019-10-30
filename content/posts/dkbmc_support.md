@@ -37,6 +37,10 @@ rate = "약 85%"
 #페이지 URL
 directURL = "http://support.dkbmc.com"
 
+startColor = "#5041b2"
+endColor = "#7969e6"
+introImg = "/img/support-intro.png"
+
 comments = true
 date = 2019-08-23T09:50:23+09:00
 +++

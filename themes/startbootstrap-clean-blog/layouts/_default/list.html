@@ -1,25 +1,21 @@
 {{ partial "header.html" . }}
-
     <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/home-bg.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>{{ .Title }}</h1>
-             <hr class="small">
-             <span class="subheading">{{ .Description }}</span>
-           </div>
-         </div>
-       </div>
-     </div>
-    </header>
+    <!-- Set your background image for this header on the line below.
+    {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')">
+      {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')">
+    {{ end }}-->
 
+    <header class="intro-header">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+    </header>
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 port-works">
-          <ul class="port-works__list">
+        <div class="col-xs-12 port-works box-align">
+          <ul class="port-works__list box-align__list">
             {{ range .Paginator.Pages }}
                 {{ .Render "summary" }}
             {{ end }}
