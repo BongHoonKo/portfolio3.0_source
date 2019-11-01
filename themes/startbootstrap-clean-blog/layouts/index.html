@@ -100,9 +100,12 @@
           </div>
         </div>
     </section>
-    <div>
-      <div></div>
-    </div>
+
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.resourceSections }}
+    {{ range $pages }}
+      {{ .Title }}
+    {{ end }}
+
     <!-- {{ $headless := .Site.GetPage "/headless" }}
     {{ $reusablePages := $headless.Resources.Match "one*" }}
     <h2>Authors</h2>

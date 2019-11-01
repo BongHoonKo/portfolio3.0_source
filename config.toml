@@ -22,6 +22,9 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
   customCSS = ["<absolute path to CSS>", "/static/css/index.css", "<or just load it off the internet>"]
   portURL = "http://fotrise3.cafe24.com"
 
+  mainSections = ["resource"]
+  resourceSections = ["posts"]
+
 [[params.social]]
   title = "twitter"
   url = "https://twitter.com/humboldtux"
