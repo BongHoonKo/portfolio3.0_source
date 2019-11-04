@@ -82,6 +82,8 @@
         left: 0;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
+        transition-duration: 0.5s;
+        opacity: 0;
     }
 }
 
@@ -166,7 +168,7 @@
         padding-bottom: 2rem;
         box-shadow: 0 0 25px rgba(0,0,0,0.15);
         background-color: $white;
-        border-radius: 6px 6px 0 0;
+        border-radius: 0 0 6px 6px;
         
         .post-title {
             color: $title-color;
@@ -233,23 +235,47 @@
         width: 100%;
         @include clearfix();
         & > li {
-            width: 25%;
-            float: left;
             text-align: center;
             margin-bottom: 2.25rem;
+            text-align: center;
 
             .port-skill__range {
                 display: block;
-                width: 90px;
-                height: 90px;
+                width: 1em;
+                height: 1em;
                 border-radius: 50%;
                 background-color: $light-gray;
-                line-height: 90px;
+                line-height: 1em;
                 margin: {
+                    bottom: 0.5rem;
                     left: auto;
                     right: auto;
+                };
+                float: none;
+            }
+            @include respond-to(min-width, 1200px) {
+                &:nth-child(3n+1) {
+                    clear: both;
+                }
+            }
+            @include respond-to(max-width, 1199px) {
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+            }
+
+            .port-skill__title {
+                font-weight: bold;
+                font-size: 1.25rem;
+                margin: {
+                    top: 1rem;
                     bottom: 0.5rem;
                 }
+            }
+            .port-skill__txt {
+                font-size: 0.95rem;
+                padding: 0.25rem 1.5rem;
+                word-break: keep-all;
             }
         }
     }
@@ -264,6 +290,12 @@
     border-radius: 3px;
     text-align: center;
     @include clearfix();
+    @include respond-to(max-width, 500px) {
+        padding: {
+            right: 0;
+            left: 0;
+        }
+    }
 
     .port-subscribe__icon {
         width: 80px;
@@ -294,6 +326,9 @@
         border: 0;
         box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
         font-size: 1.25rem;
+        @include respond-to(max-width, 500px) {
+            padding-right: 2.5rem;
+        }
     }
     .port-subscribe__btn {
         position: absolute;
@@ -306,9 +341,28 @@
         padding: 0.85rem 2rem;
         border-radius: 300rem;
         margin-top: 1px;
+
+        @include respond-to(max-width, 500px) {
+            position: static;
+            transform: translateY(0);
+            display: inline-block;
+            margin-top: 1rem;
+        }
     }
     .port-subscribe__txt {
         font-size: 0.85rem;
         color: $gray;
     }
+}
+
+
+.port-loading__wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #5041b2, #7969e6);
+    transition-duration: 0.5s;
+    z-index: 9999;
 }

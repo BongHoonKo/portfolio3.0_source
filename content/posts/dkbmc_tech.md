@@ -30,7 +30,7 @@ conImages = [
 ]
 
 #클라이언트
-client = "DK BMC"
+client = "DKBMC"
 
 #참여율
 rate = "약 90%"

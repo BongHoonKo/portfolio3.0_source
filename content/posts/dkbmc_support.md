@@ -12,7 +12,7 @@ authors = [
 ]
 
 #제목
-title = "DK BMC 고객센터"
+title = "DKBMC 고객센터"
 
 #설명
 description = "DK BMC의 Salesforce org와 연동하여 고객의 문의를 주고받을 수 있는 고객센터 페이지 퍼블리싱을 전담하였습니다."
@@ -29,7 +29,7 @@ conImages = [
 ]
 
 #클라이언트
-client = "DK BMC 운영팀"
+client = "DKBMC 운영팀"
 
 #참여율
 rate = "약 85%"

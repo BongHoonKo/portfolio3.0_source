@@ -13,7 +13,7 @@ authors = [
 ]
 
 #제목
-title = "DK BMC 비즈니스 블로그"
+title = "DKBMC 비즈니스 블로그"
 
 #설명
 description = "DK BMC의 비즈니스 관련 포스트를 업로드하기 위한 비즈니스 블로그 개발"
@@ -30,7 +30,7 @@ conImages = [
 ]
 
 #클라이언트
-client = "DK BMC"
+client = "DKBMC"
 
 #참여율
 rate = "약 90%"

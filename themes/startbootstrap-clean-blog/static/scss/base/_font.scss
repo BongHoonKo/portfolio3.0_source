@@ -39,5 +39,15 @@
       font-weight: normal;
       font-family: 'NanumSquare', sans-serif;
       letter-spacing: -0.01em;
-      line-height: 1.5;
+      line-height: 1.618;
+  }
+
+  body {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    &.scrollable {
+      overflow: auto;
+      position: relative;
+    }
   }

@@ -1,5 +1,9 @@
 {{ partial "header.html" .}}
 
+    <article class="port-loading__wrap">
+      
+    </article>
+
     <section class="port-main__wrap container-fluid port-section">
       <div class="port-main__back"></div>
       <div class="container">
@@ -25,21 +29,23 @@
         <div class="port-section__box row">
           <h3 class="port-section__title">ABOUT</h3>
           <hr class="port-section__bar"/>
-          <article class="port-about col-lg-10 col-lg-offset-1 col-xs-12">
+          <article class="col-lg-10 col-lg-offset-1 col-xs-12">
+            <div class="port-about">
             <div style="width:250px;height:250px;background-color:#9a9a9a;float:left;"></div>
-            <div class="port-about__box">
-              <h5 class="port-about__title">Profile</h5>
-              <ul class="port-about__list">
-                <li><em>이름</em> : 고봉훈</li>
-                <li><em>생년월일</em> : 1992.01.04</li>
-              </ul>
+              <div class="port-about__box">
+                <h5 class="port-about__title">Profile</h5>
+                <ul class="port-about__list">
+                  <li><em>이름</em> : 고봉훈</li>
+                  <li><em>생년월일</em> : 1992.01.04</li>
+                </ul>
 
-              <h5 class="port-about__title">Career &amp; Education</h5>
-              <ul class="port-about__list">
-                {{ range .Site.Data.career }}
-                  <li><em>{{ .date }} : </em> {{ .title }}</li>
-                {{ end }}
-              </ul>
+                <h5 class="port-about__title">Career &amp; Education</h5>
+                <ul class="port-about__list">
+                  {{ range .Site.Data.career }}
+                    <li><em>{{ .date }} : </em> {{ .title }}</li>
+                  {{ end }}
+                </ul>
+              </div>
             </div>
           </article>
         </div>
@@ -70,11 +76,18 @@
           <div class="port-skill">
             <ul class="port-skill__list">
               {{ range .Site.Data.skills }}
-                <li>
-                  <i class="port-skill__range">{{ .percentage }} %</i>
-                  {{ .title }}
+                <li class="col-lg-4 col-sm-6 col-xs-12">
+                  <i class="port-skill__range c100 p{{ .percentage }} small">
+                    <span>{{ .percentage }}%</span>
+                    <div class="slice">
+                      <div class="bar" style="border-color:{{ .color }};"></div>
+                      <div class="fill" style="border-color:{{ .color }};"></div>
+                    </div>
+                  </i>
+                  <h4 class="port-skill__title">{{ .title }}</h4>
+                  <p class="port-skill__txt">{{ .description }}</p>
                 </li>
-              {{end}}
+              {{ end }}
             </ul>
           </div>
         </div>
@@ -90,21 +103,21 @@
             <h4 class="port-subscribe__title">
               How to Subscribe my portfolio
             </h4>
-            <form class="port-subscribe__form col-xs-8 col-xs-offset-2">
+            <form class="port-subscribe__form col-xs-12 col-md-8 col-md-offset-2">
               <input type="email" class="port-subscribe__input" placeholder="EMIAL ADDRESS"/>
               <a href="javascript:void(0)" class="port-subscribe__btn">Subscribe</a>
             </form>
-            <p class="port-subscribe__txt">
+            <p class="port-subscribe__txt col-xs-12">
               * 새로운 포트폴리오가 업로드 되었을 때, 입력한 메일로 소식을 받을 수 있습니다
             </p>
           </div>
         </div>
     </section>
 
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.resourceSections }}
+    <!-- {{ $pages := where site.RegularPages "Type" "in" site.Params.resourceSections }}
     {{ range $pages }}
       {{ .Title }}
-    {{ end }}
+    {{ end }} -->
 
     <!-- {{ $headless := .Site.GetPage "/headless" }}
     {{ $reusablePages := $headless.Resources.Match "one*" }}
