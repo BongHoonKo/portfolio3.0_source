@@ -4,8 +4,7 @@
     {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')">
       {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')">
     {{ end }}-->
-
-    <header class="intro-header" style="background:linear-gradient(90deg, {{.Page.Params.startColor}}, {{.Page.Params.endColor}});">
+    <header class="intro-header" style="background:linear-gradient(90deg,{{ if .Page.Params.startColor }}{{.Page.Params.startColor}}, {{.Page.Params.endColor}});">{{else}}#5041b2, #7969e6);">{{end}}
         <div class="port-main__back"></div>
         <section class="container">
             <div class="row">

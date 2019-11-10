@@ -47,11 +47,11 @@
     background-repeat: no-repeat;
     
     &.gobong {
-        /*background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);*/
-        background-size: 500px;
+        background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
+        background-size: 525px;
         background-position: bottom right 30px;
         background-repeat: no-repeat;
-        opacity: 0.75;
+        opacity: 0.9;
     }
 }
 .port-main {
@@ -61,7 +61,7 @@
         color: $white;
         font-size: 3.5rem;
         font-weight: 900;
-        text-indent: -10px;
+        text-indent: -5px;
         text-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 
         & > strong {
@@ -97,6 +97,14 @@
     @include clearfix();
 }
 
+.port-about__img {
+    width: 250px;
+    height: 250px;
+    float: left;
+    background-image: url("http://fotrise3.cafe24.com/resources/images/gobong.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .port-about__box {
     float: left;
     margin-left: 2rem;
@@ -249,7 +257,7 @@
                 margin: {
                     bottom: 0.5rem;
                     left: auto;
-                    right: auto;
+                    right: auto
                 };
                 float: none;
             }

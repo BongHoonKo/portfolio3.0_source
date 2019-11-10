@@ -36,7 +36,7 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
   url = "https://www.facebook.com/FACEBOOKHANDLE"
 
 [[menu.main]]
-  name = "home"
+  name = "Home"
   url = "/"
   weight = -200
 [[menu.main]]

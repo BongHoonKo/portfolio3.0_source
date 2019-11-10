@@ -43,11 +43,13 @@
   }
 
   body {
-    position: fixed;
-    overflow-y: scroll;
     width: 100%;
-    &.scrollable {
-      overflow: auto;
-      position: relative;
+    &.home-body {
+      position: fixed;
+      overflow-y: scroll;
+      &.scrollable {
+        overflow: auto;
+        position: relative;
+      }
     }
   }
