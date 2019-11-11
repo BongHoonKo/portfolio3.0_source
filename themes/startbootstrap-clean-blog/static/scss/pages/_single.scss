@@ -1,5 +1,8 @@
 .intro-header.single-header {
     min-height: 420px;
+    .intro-header__txt {
+        max-width: 70%;
+    }
 }
 .content-line {
     pre {

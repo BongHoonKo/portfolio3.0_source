@@ -51,7 +51,14 @@
         background-size: 525px;
         background-position: bottom right 30px;
         background-repeat: no-repeat;
-        opacity: 0.9;
+        opacity: 0;
+        left: 5%;
+        transition-delay: 0.5s;
+        transition-duration: 1.2s;
+        &.active {
+            left: 0;
+            opacity: 0.9;
+        }
     }
 }
 .port-main {
@@ -187,7 +194,7 @@
             word-break: keep-all;
         }
         .post-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: $txt-color;
             line-height: 1.618em;
             word-break: keep-all;
