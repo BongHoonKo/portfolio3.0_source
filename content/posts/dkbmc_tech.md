@@ -26,14 +26,19 @@ image = "/img/tech_thumb.jpg"
 
 #컨텐츠 이미지
 conImages = [
-    "http://fotrise3.cafe24.com/"
+    "/img/tech-top.png",
+    "http://fotrise3.cafe24.com/resources/images/font_nanum_square.png",
+    "/img/tech-full.jpg"
 ]
 
 #클라이언트
-client = "DKBMC"
+client = "(주) DK BMC"
 
 #참여율
 rate = "약 90%"
+
+#출시일
+rDate = "2019.06"
 
 #페이지 URL
 directURL = "http://blog.dkbmc.com"

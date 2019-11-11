@@ -25,11 +25,13 @@ image = "/img/support_thumb.jpg"
 
 #컨텐츠 이미지
 conImages = [
-    "http://fotrise3.cafe24.com/"
+    "/img/support-top.png",
+    "http://fotrise3.cafe24.com/resources/images/font_nanum_square.png",
+    "/img/support-full.jpg",
 ]
 
 #클라이언트
-client = "DKBMC 운영팀"
+client = "(주) DK BMC 운영팀"
 
 #참여율
 rate = "약 85%"
@@ -37,8 +39,8 @@ rate = "약 85%"
 #페이지 URL
 directURL = "http://support.dkbmc.com"
 
-startColor = "#5041b2"
-endColor = "#7969e6"
+startColor = "#2a295c"
+endColor = "#8282dc"
 introImg = "/img/support-intro.png"
 
 comments = true

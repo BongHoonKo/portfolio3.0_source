@@ -374,7 +374,7 @@ textarea {
 
 
 .container {
-    @include respond-to(min-width, 1250px) {
-        width: 1250px;
+    @include respond-to(min-width, 1350px) {
+        width: 1350px;
     }
 }

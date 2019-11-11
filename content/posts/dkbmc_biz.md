@@ -26,7 +26,9 @@ image = "/img/biz_thumb.jpg"
 
 #컨텐츠 이미지
 conImages = [
-    "http://fotrise3.cafe24.com/"
+    "/img/biz-top.png",
+    "http://fotrise3.cafe24.com/resources/images/font_nanum_square.png",
+    "/img/biz-full.jpg"
 ]
 
 #클라이언트

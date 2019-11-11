@@ -14,7 +14,7 @@ authors = [
 ]
 
 #제목
-title = "Index Page"
+title = "Works"
 
 #설명
 description = ""

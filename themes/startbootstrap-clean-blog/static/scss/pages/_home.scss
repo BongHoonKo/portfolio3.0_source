@@ -182,12 +182,15 @@
             color: $title-color;
             font-weight: 900;
             font-size: 2rem;
-            margin: 0.5rem 0;
+            margin: 1rem 0;
             letter-spacing: -0.015em;
+            word-break: keep-all;
         }
         .post-subtitle {
             font-size: 1.1rem;
             color: $txt-color;
+            line-height: 1.618em;
+            word-break: keep-all;
         }
         .post-data {
             font-size: 1.1rem;
