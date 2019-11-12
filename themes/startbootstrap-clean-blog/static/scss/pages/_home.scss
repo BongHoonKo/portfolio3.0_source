@@ -82,6 +82,7 @@
         font-size: 1.25rem;
         margin-bottom: 2rem;
         text-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+        transition-delay: 0.25s;
     }
     .port-main__box {
         position: absolute;
@@ -124,8 +125,39 @@
         & > li {
             text-indent: 5px;
             margin-bottom: 0.25rem;
+            transition-duration: 0.65s;
+            transition-timing-function: ease;
             & > em {
                 opacity: 0.65;
+            }
+
+            &.profile {
+                li:first-child {
+                    transition-delay: 0s;
+                }
+                li:last-child {
+                    transition-delay: 0.15s;
+                }
+            }
+            &.career {
+                li:first-child {
+                    transition-delay: 0.3s;
+                }
+                li:nth-child(2) {
+                    transition-delay: 0.45s;
+                }
+                li:nth-child(3) {
+                    transition-delay: 0.6s;
+                }
+                li:nth-child(4) {
+                    transition-delay: 0.75s;
+                }
+                li:nth-child(5) {
+                    transition-delay: 0.9s;
+                }
+                li:last-child {
+                    transition-delay: 1.05s;
+                }
             }
         }
         &:first-of-type {
@@ -137,6 +169,7 @@
 // Recent Works
 .port-works {
     text-align: center;
+    position: relative;
 }
 .port-works__list {
     width: 100%;
@@ -256,6 +289,24 @@
             text-align: center;
             margin-bottom: 2.25rem;
             text-align: center;
+            &:first-child {
+                transition-delay: 0s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+            &:nth-child(3) {
+                transition-delay: 0.2s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+            &:nth-child(5) {
+                transition-delay: 0.4s;
+            }
+            &:last-child {
+                transition-delay: 0.5s;
+            }
 
             .port-skill__range {
                 display: block;

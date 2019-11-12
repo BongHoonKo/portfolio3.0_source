@@ -11,13 +11,13 @@
         <div class="row">
           <div class="port-main col-xs-12 port-section__box">
             <div class="port-main__box">
-              <h2 class="port-main__title">
+              <h2 class="port-main__title animate-slide">
                 <strong>Test's </strong>Portfolio
               </h2>
-              <p class="port-main__txt">
+              <p class="port-main__txt animate-slide">
                 Web Publisher BongHoon Ko
               </p>
-              <a href="#" class="port-link__btn white__btn">My Works</a>
+              <a href="#" class="port-link__btn white__btn animate-slide">My Works</a>
             </div>
           </div>
         </div>
@@ -34,15 +34,15 @@
               <div class="port-about__img"></div>
               <div class="port-about__box">
                 <h5 class="port-about__title">Profile</h5>
-                <ul class="port-about__list">
-                  <li><em>이름</em> : 고봉훈</li>
-                  <li><em>생년월일</em> : 1992.01.04</li>
+                <ul class="port-about__list profile">
+                  <li class="animate-stick"><em>이름</em> : 고봉훈</li>
+                  <li class="animate-stick"><em>생년월일</em> : 1992.01.04</li>
                 </ul>
 
                 <h5 class="port-about__title">Career &amp; Education</h5>
-                <ul class="port-about__list">
+                <ul class="port-about__list career">
                   {{ range .Site.Data.career }}
-                    <li><em>{{ .date }} : </em> {{ .title }}</li>
+                    <li class="animate-stick"><em>{{ .date }} : </em> {{ .title }}</li>
                   {{ end }}
                 </ul>
               </div>
@@ -57,6 +57,7 @@
           <h3 class="port-section__title">RECENT WORKS</h3>
           <hr class="port-section__bar"/>
           <article class="port-works box-align">
+            <div class="animate-skew"></div>
             <ul class="port-works__list box-align__list">
               {{ $posts := or .Site.Params.PostSummariesFrontPage }}
               {{ range first $posts (where .Data.Pages "Type" "posts") }}
@@ -76,7 +77,7 @@
           <div class="port-skill">
             <ul class="port-skill__list">
               {{ range .Site.Data.skills }}
-                <li class="col-lg-4 col-sm-6 col-xs-12">
+                <li class="col-lg-4 col-sm-6 col-xs-12 animate-drop">
                   <i class="port-skill__range c100 p{{ .percentage }} small">
                     <span>{{ .percentage }}%</span>
                     <div class="slice">
@@ -127,7 +128,7 @@
         {{ .Content }}
     {{ end }} -->
 
-    <script>
+    <!-- <script>
       $("body").addClass("home-body");
-    </script>
+    </script>-->
 {{ partial "footer.html" .}}
