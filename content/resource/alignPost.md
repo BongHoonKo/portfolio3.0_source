@@ -1,11 +1,8 @@
 +++
 #카테고리
-categories = [
-    "",
-]
-
 series = [
-    
+    "test",
+    "series Test"
 ]
 
 #작성자
@@ -17,7 +14,7 @@ authors = [
 title = "Align Post"
 
 #설명
-description = ""
+description = "Blog에서 이용한 블로그 포스트 정렬 코드 정리"
 
 #공개: false / 비공개: true
 draft = false

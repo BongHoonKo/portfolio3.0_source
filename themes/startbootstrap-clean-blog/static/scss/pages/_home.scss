@@ -47,7 +47,7 @@
     background-repeat: no-repeat;
     
     &.gobong {
-        background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
+        //background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
         background-size: 525px;
         background-position: bottom right 30px;
         background-repeat: no-repeat;
@@ -58,6 +58,11 @@
         &.active {
             left: 0;
             opacity: 0.9;
+        }
+
+        @include respond-to(max-width, 768px) {
+            background-size: 350px;
+            background-position: bottom right;
         }
     }
 }
@@ -71,6 +76,9 @@
         text-indent: -5px;
         text-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 
+        @include respond-to(max-width, 768px) {
+            text-indent: 0;
+        }
         & > strong {
             opacity: 0.5;
         }
@@ -92,6 +100,10 @@
         transform: translateY(-50%);
         transition-duration: 0.5s;
         opacity: 0;
+
+        @include respond-to(max-width, 768px) {
+            top: 25%;
+        }
     }
 }
 
@@ -171,6 +183,16 @@
     text-align: center;
     position: relative;
 }
+.post-wrap {
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition-duration: 0.3s;
+
+    &:hover {
+        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25)
+    }
+}
 .port-works__list {
     width: 100%;
     text-align: left;
@@ -214,7 +236,6 @@
     .port-works__post {
         padding: 1.5rem;
         padding-bottom: 2rem;
-        box-shadow: 0 0 25px rgba(0,0,0,0.15);
         background-color: $white;
         border-radius: 0 0 6px 6px;
         
@@ -225,6 +246,7 @@
             margin: 1rem 0;
             letter-spacing: -0.015em;
             word-break: keep-all;
+            line-height: 1.25em;
         }
         .post-subtitle {
             font-size: 1rem;
@@ -232,7 +254,7 @@
             line-height: 1.618em;
             word-break: keep-all;
         }
-        .post-data {
+        .post-date {
             font-size: 1.1rem;
         }
     }
@@ -240,18 +262,7 @@
         width: 100%;
         max-width: 100%;
         border-radius: 6px 6px 0 0;
-        border: 1px solid $light-gray;
-    }
-    .port-category {
-        font-size: 0.8rem;
-        padding: 0.25rem 0.5rem;
-        color: #fff;
-        background-color: $main-color;
-        border-radius: 4px;
-        margin-right: 0.25rem;
-    }
-    .port-category:hover {
-        text-decoration: underline;
+        // border: 1px solid $light-gray;
     }
 
     .fas.fa-share {
@@ -278,6 +289,18 @@
             height: auto !important;
         }
     }
+}
+
+.port-category {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    background-color: $main-color;
+    border-radius: 4px;
+    margin-right: 0.25rem;
+}
+.port-category:hover {
+    text-decoration: underline;
 }
 
 // Skills
@@ -313,7 +336,7 @@
                 width: 1em;
                 height: 1em;
                 border-radius: 50%;
-                background-color: $light-gray;
+                // background-color: $light-gray;
                 line-height: 1em;
                 margin: {
                     bottom: 0.5rem;

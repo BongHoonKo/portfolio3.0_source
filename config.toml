@@ -25,6 +25,15 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
   mainSections = ["resource"]
   resourceSections = ["posts"]
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[permalinks]
+  series = "/series/:slug"
+  tags = "/tags/:slug"
+
 [[params.social]]
   title = "twitter"
   url = "https://twitter.com/humboldtux"

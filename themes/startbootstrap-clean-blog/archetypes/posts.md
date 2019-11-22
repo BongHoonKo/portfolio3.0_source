@@ -36,7 +36,7 @@ rate = ""
 directURL = ""
 
 comments = true
-date = 2019-10-28T09:50:23+09:00
+date = {{ .Date }}
 +++
 
 <!-- 게시글 내용 -->

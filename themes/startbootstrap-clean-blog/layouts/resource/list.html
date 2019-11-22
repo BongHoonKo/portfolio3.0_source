@@ -15,11 +15,11 @@
     <!-- Main Content -->
     <div class="container list-container">
       <div class="row">
-          <h3 class="port-section__title">WORKS</h3>
+          <h3 class="port-section__title">MEMO</h3>
           <hr class="port-section__bar">
           <br/>
-        <div class="col-xs-12 port-works box-align">
-          <ul class="port-works__list box-align__list">
+        <div class="col-xs-8 col-xs-offset-2 port-memo">
+          <ul class="port-memo__list">
             {{ range .Paginator.Pages }}
                 {{ .Render "summary" }}
             {{ end }}

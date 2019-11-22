@@ -1,0 +1,31 @@
+.port-memo__content {
+    margin-top: 60px;
+}
+.port-memo__list {
+    & > li {
+        margin-bottom: 1.5rem;
+    }
+}
+.port-memo__post {
+    padding: 1.5rem 2rem;
+    // border: 1px solid $light-gray;
+    border-radius: 4px;
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.25);
+    .post-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        color: #666;
+        margin-bottom: 0.45rem;
+        line-height: 1.25em;
+    }
+    .post-subtitle {
+        font-size: 1rem;
+        color: #666;
+    }
+    .post-meta {
+        margin: 0.65rem 0;
+        .port-category {
+            margin-right: 0;
+        }
+    }
+}

@@ -5,9 +5,23 @@
     }
 }
 .content-line {
+    img {
+        max-width: 100%;
+    }
     pre {
         letter-spacing: normal;
         padding: 1rem 0;
+        margin: 0.5rem 0;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+        font-weight: bold;
+        line-height: 1.5em;
+    }
+    hr {
+        border-color: $main-color;
+        border-width: 3px;
     }
 
     .content-line__txt {

@@ -1,4 +1,5 @@
               <li class="col-lg-4 col-sm-6">
+                <div class="post-wrap">
                   <div class="port-works-img__link">
                     <a href="{{ .Permalink }}">
                       <img class="port-works__img" src="{{ .Page.Params.image }}" alt=""/>
@@ -16,8 +17,9 @@
                           <h3 class="post-subtitle">{{ .Description }}</h3>
                         </a>
                         <br/>
-                        <p class="post-data">
+                        <p class="post-date">
                             {{ .Page.Date.Format "Mon, Jan 2, 2006" }}
                         </p>
                   </div>
+                </div>
               </li>
