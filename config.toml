@@ -4,7 +4,7 @@ canonifyurls = true
 paginate = 9
 theme = "startbootstrap-clean-blog"
 languageCode = "en-us"
-copyright = "Code released under the Apache 2.0 license."
+copyright = "2019 Bong-Hoon Ko. all rights reserved."
 googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
 disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus comments
 

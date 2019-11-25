@@ -30,6 +30,12 @@
     background: linear-gradient(90deg, #5041b2, #7969e6);
     position: relative;
 
+    @include respond-to(max-width, 768px) {
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 100vh;
+    }
+
     & .row,
     & > .container {
         height: 100%;
@@ -47,7 +53,7 @@
     background-repeat: no-repeat;
     
     &.gobong {
-        //background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
+        background-image: url(http://fotrise3.cafe24.com/resources/images/gobong-1.png);
         background-size: 525px;
         background-position: bottom right 30px;
         background-repeat: no-repeat;
@@ -62,7 +68,7 @@
 
         @include respond-to(max-width, 768px) {
             background-size: 350px;
-            background-position: bottom right;
+            background-position: bottom right -30px;
         }
     }
 }
@@ -78,6 +84,7 @@
 
         @include respond-to(max-width, 768px) {
             text-indent: 0;
+            font-size: 3rem;
         }
         & > strong {
             opacity: 0.5;
@@ -91,6 +98,10 @@
         margin-bottom: 2rem;
         text-shadow: 5px 5px 15px rgba(0,0,0,0.25);
         transition-delay: 0.25s;
+
+        @include respond-to(max-width, 768px) {
+            font-size: 1rem;
+        }
     }
     .port-main__box {
         position: absolute;
@@ -102,7 +113,9 @@
         opacity: 0;
 
         @include respond-to(max-width, 768px) {
-            top: 25%;
+            top: 30%;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

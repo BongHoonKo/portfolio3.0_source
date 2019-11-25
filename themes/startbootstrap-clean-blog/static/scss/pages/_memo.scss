@@ -1,5 +1,32 @@
 .port-memo__content {
     margin-top: 60px;
+    .port-memo__hd {
+        background: linear-gradient(90deg,#2a295c, #8282dc);
+        padding: 6.25rem 0;
+        margin-bottom: 5rem;
+        text-align: center;
+        position: relative;
+
+        .port-memo__title {
+            color: $white;
+            font-size: 2.85rem;
+            font-weight: 900;
+        }
+        .port-memo__description {
+            color: $white;
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        & > hr {
+            width: 45px;
+            height: 3px;
+            background-color: $white;
+            border-color: $white;
+            opacity: 0.65;
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 .port-memo__list {
     & > li {
@@ -11,6 +38,12 @@
     // border: 1px solid $light-gray;
     border-radius: 4px;
     box-shadow: 5px 5px 12px rgba(0,0,0,0.25);
+    border-left: 8px solid #8282DC;
+    transition-duration: 0.3s;
+    
+    &:hover {
+        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25);
+    }
     .post-title {
         font-size: 2.25rem;
         font-weight: 900;
@@ -21,6 +54,7 @@
     .post-subtitle {
         font-size: 1rem;
         color: #666;
+        line-height: 1.5em;
     }
     .post-meta {
         margin: 0.65rem 0;
